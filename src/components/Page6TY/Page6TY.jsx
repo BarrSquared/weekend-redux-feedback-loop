@@ -2,9 +2,9 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 
 function Page6TY() {
-    
+
     const leaveNewFeedback = (event) => {
-        
+        console.log('In page 6, clicking Leave New Feedback button');
     }
 
     return(
