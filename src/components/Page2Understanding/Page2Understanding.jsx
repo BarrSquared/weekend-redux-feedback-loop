@@ -1,4 +1,5 @@
-import { useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux';
+import { useState } from 'react-redux';
 
 function Page2Understanding() {
 
@@ -6,7 +7,7 @@ function Page2Understanding() {
 
     return(
         <section>
-            <h2>How well are you understanding the content?</h2>
+            <h2>Rate how well are you understanding the content?</h2>
         </section>
     );
 }
