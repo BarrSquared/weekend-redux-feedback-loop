@@ -11,6 +11,7 @@ import Page2Understanding from '../Page2Understanding/Page2Understanding';
 import Page3Supported from '../Page3Supported/Page3Supported';
 import Page4Comments from '../Page4Comments/Page4Comments';
 import Page5Review from '../Page5Review/Page5Review';
+import Page6TY from '../Page6TY/Page6TY';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/Page3Supported" component={Page3Supported} />
           <Route exact path="/Page4Comments" component={Page4Comments} />
           <Route exact path="/Page5Review" component={Page5Review} />
+          <Route exact path="/Page6TY" component={Page6TY} />
         </Router>
       </main>
     </div>

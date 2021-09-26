@@ -21,10 +21,10 @@ const reviewToAdd = (state = defaultReview, action) => {
         return {...state, understanding: action.payload.understanding};
     } else if(action.type === 'SET_SUPPORT_RATING') {
         console.log('In index.js, updating support.');
-        return {...state, feeling: action.payload.support};
+        return {...state, support: action.payload.support};
     } else if(action.type === 'SET_COMMENT') {
         console.log('In index.js, updating comment.');
-        return{...state, comment: action.payload.comment};
+        return{...state, comments: action.payload.comment};
     }
     return state;
 }
