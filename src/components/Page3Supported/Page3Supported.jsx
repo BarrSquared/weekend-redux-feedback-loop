@@ -33,7 +33,7 @@ function Page3Supported() {
             <br />
             <h2>How well are you being supported?</h2>
             <h3>On a scale from 1 to 5 rate how well you are being supported,</h3>
-            <h3>with 1 indicating a lack of support and 5 indicating a positive support.</h3>
+            <h3>with 1 indicating a lack of support and 5 indicating positive support.</h3>
             <form onSubmit={submitSupport} >
                 <input
                     onChange={(event) => setSupport(event.target.value)}
