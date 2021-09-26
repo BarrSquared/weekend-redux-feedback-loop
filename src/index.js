@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, combineReducers, applyMiddleWare } from 'redux';
-import { Provider } from 'react-redux';
-import logger from 'redux-logger';
 import './index.css';
 import App from './components/App/App';
+import logger from 'redux-logger';
 import registerServiceWorker from './registerServiceWorker';
+import { Provider } from 'react-redux';
+import { createStore, combineReducers } from 'redux';
+
+
+
 
 const defaultReview = {feeling: '', understanding: '', support: '', comments: ''};
 
@@ -17,11 +20,19 @@ const reviewToAdd = (state = defaultReview, action) => {
 }
 
 const reduxStore = createStore(
-    combineReducers({
+    combineReducers(
+        {
         reviewToAdd,
-    }),
-    applyMiddleWare(logger)
+        }
+    ),
+    // applyMiddleWare(logger)
 );
 
-ReactDOM.render(<Provider store={reduxStore}><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(
+    <React.StrictMode> 
+        <Provider store={reduxStore}>
+            <App />
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root'));
 registerServiceWorker();

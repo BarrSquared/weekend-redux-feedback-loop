@@ -1,10 +1,12 @@
+import { useState } from 'react';
 import { useDispatch } from "react-redux";
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import axios from 'axios';
+// import { useHistory } from 'react-router-dom';
 
 function Page1Feeling() {
 
     const dispatch = useDispatch();
+    // const history = useHistory();
 
     let [feeling, setFeeling] = useState('');
 
@@ -17,6 +19,7 @@ function Page1Feeling() {
                 payload: feeling
             });
             clearFeeling();
+            // history.push('/Page2Understanding')
         } else {
             alert("You must enter a number between 1 and 5");
             clearFeeling();
@@ -38,6 +41,9 @@ function Page1Feeling() {
                     type="number"
                     placeholder="1-5"
                 />
+                <button type="next">
+                    Next
+                </button>
             </form>
         </section>
     );
