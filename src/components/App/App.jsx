@@ -22,6 +22,7 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <main>
+        {/* Add button to start feedback */}
         <Router>
           <Route exact path="/Page1Feeling" component={Page1Feeling} />
           <Route exact path="/Page2Understanding" component={Page2Understanding} />

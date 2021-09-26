@@ -11,6 +11,7 @@ Your project description goes here. What problem did you solve? How did you solv
 ### Checklist
 [X] - Import hash router and set routes on app.jsx
 [X] - Make and 'path' components
+[] - Make button in app.js to start feedback loop
 [X] - Populate component forms
 [X] - Use dispatch and reducers to update redux store
 [] - Get components to link to each other on 'next' button
