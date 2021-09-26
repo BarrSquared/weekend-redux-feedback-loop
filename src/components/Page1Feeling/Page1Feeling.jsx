@@ -21,11 +21,12 @@ function Page1Feeling() {
             clearFeeling();
             // history.push('/Page2Understanding')
         } else {
-            alert("You must enter a number between 1 and 5");
+            alert("You must enter a number between 1 and 5!");
             clearFeeling();
             return;
         }
     }
+    
     const clearFeeling = () => {
         setFeeling('');
     }
@@ -34,8 +35,8 @@ function Page1Feeling() {
     return (
         <section>
             <h2>How are you feeling today?</h2>
-            <h3>Rate how you are feeling today by inputting a number between 1 and 5</h3>
-            <h3>With 1 feeling not so good and 5 feeling great</h3>
+            <h3>On a scale from 1 to 5 rate how you are feeling today,</h3>
+            <h3>with 1 indicating mostly negative and 5 indicating mostly positive.</h3>
             <form onSubmit={submitFeeling} >
                 <input
                     onChange={(event) => setFeeling(event.target.value)}
