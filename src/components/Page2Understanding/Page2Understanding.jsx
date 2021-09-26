@@ -29,6 +29,8 @@ function Page2Understanding() {
 
     return(
         <section>
+            <h3>2 of 4 pages</h3>
+            <br />
             <h2>How well are you understanding the content?</h2>
             <h3>On a scale from 1 to 5 rate how well you understand the content,</h3>
             <h3>with 1 indicating a lack of understanding and 5 indicating a positive comprehension.</h3>

@@ -16,6 +16,9 @@ const reviewToAdd = (state = defaultReview, action) => {
     if(action.type === 'SET_FEELING_RATING') {
         console.log('In index.js, updating feeling, ');
         return {...state, feeling: action.payload.feeling};
+    } else if(action.type === 'SET_UNDERSTANDING_RATING') {
+        console.log('In index.js, updating understanding.');
+        return {...state, understanding: action.payload.understanding};
     }
     return state;
 }

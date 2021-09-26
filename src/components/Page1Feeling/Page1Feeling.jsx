@@ -26,7 +26,7 @@ function Page1Feeling() {
             return;
         }
     }
-    
+
     const clearFeeling = () => {
         setFeeling('');
     }
@@ -34,6 +34,8 @@ function Page1Feeling() {
 
     return (
         <section>
+            <h3>1 of 4 pages</h3>
+            <br />
             <h2>How are you feeling today?</h2>
             <h3>On a scale from 1 to 5 rate how you are feeling today,</h3>
             <h3>with 1 indicating mostly negative and 5 indicating mostly positive.</h3>
