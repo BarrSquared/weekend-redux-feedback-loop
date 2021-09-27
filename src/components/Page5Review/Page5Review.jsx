@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 function Page5Review() {
-    const reviewToAdd = useSelector(store => store.reviewToAdd);
+    const reviewToAdd = useSelector(reduxStore => reduxStore.reviewToAdd);
     // const history = useHistory();
 
     const sendToServer = () => {

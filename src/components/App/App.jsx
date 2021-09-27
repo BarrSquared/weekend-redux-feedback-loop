@@ -6,6 +6,7 @@ import React from 'react';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import './App.css';
+
 import Page1Feeling from '../Page1Feeling/Page1Feeling';
 import Page2Understanding from '../Page2Understanding/Page2Understanding';
 import Page3Supported from '../Page3Supported/Page3Supported';
