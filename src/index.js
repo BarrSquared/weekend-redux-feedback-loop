@@ -5,9 +5,7 @@ import App from './components/App/App';
 import logger from 'redux-logger';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
-import { createStore, combineReducers } from 'redux';
-
-
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 
 
 const defaultReview = {feeling: '', understanding: '', support: '', comments: ''};
@@ -35,7 +33,7 @@ const reduxStore = createStore(
         reviewToAdd,
         }
     ),
-    // applyMiddleWare(logger)
+    applyMiddleware(logger)
 );
 
 ReactDOM.render(

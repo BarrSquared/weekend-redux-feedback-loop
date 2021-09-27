@@ -9,7 +9,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-
+app.get('/test', (req, res) => {
+    console.log()
+})
+// add app.use route for review feedback
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
