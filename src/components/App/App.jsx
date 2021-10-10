@@ -25,7 +25,7 @@ function App() {
       <main>
         {/* Add button to start feedback */}
         <Router>
-          <Route exact path="/Page1Feeling" component={Page1Feeling} />
+          <Route exact path="/" component={Page1Feeling} />
           <Route exact path="/Page2Understanding" component={Page2Understanding} />
           <Route exact path="/Page3Supported" component={Page3Supported} />
           <Route exact path="/Page4Comments" component={Page4Comments} />
