@@ -1,9 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function Page2Understanding() {
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     let [understanding, setUnderstanding] = useState('');
 
@@ -16,6 +18,7 @@ function Page2Understanding() {
                 payload: understanding
             });
             clearUnderstanding();
+            history.push('/Page3Understanding');
         } else {
             alert("You must enter a number between 1 and 5!");
             clearUnderstanding();

@@ -13,16 +13,16 @@ const defaultReview = {feeling: '', understanding: '', support: '', comments: ''
 const reviewToAdd = (state = defaultReview, action) => {
     if(action.type === 'SET_FEELING_RATING') {
         console.log('In index.js, updating feeling.');
-        return {...state, feeling: action.payload.feeling};
+        return {...state, feeling: action.payload};
     } else if(action.type === 'SET_UNDERSTANDING_RATING') {
         console.log('In index.js, updating understanding.');
-        return {...state, understanding: action.payload.understanding};
+        return {...state, understanding: action.payload};
     } else if(action.type === 'SET_SUPPORT_RATING') {
         console.log('In index.js, updating support.');
-        return {...state, support: action.payload.support};
+        return {...state, support: action.payload};
     } else if(action.type === 'SET_COMMENT') {
         console.log('In index.js, updating comment.');
-        return{...state, comments: action.payload.comment};
+        return{...state, comments: action.payload};
     }
     return state;
 }

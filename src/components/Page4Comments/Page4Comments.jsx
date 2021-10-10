@@ -1,9 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function Page4Comments() {
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     let [comment, setComment] = useState('');
 
@@ -16,6 +18,7 @@ function Page4Comments() {
                 payload: comment
             });
             clearComment();
+            history.push('/page5Review')
         } else {
             alert("Your comment must be less than 500 characters.");
             clearComment();

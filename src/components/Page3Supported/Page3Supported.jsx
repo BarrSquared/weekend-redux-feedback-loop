@@ -1,9 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function Page3Supported() {
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     let [support, setSupport] = useState('');
 
@@ -16,6 +18,7 @@ function Page3Supported() {
                 payload: support
             });
             clearSupport();
+            history.push('/page4Comments');
         } else {
             alert("You must enter a number between 1 and 5!");
             clearSupport();

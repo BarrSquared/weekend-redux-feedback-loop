@@ -1,12 +1,12 @@
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import axios from 'axios';
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 function Page5Review() {
     const reviewToAdd = useSelector(reduxStore => reduxStore.reviewToAdd);
-    // const history = useHistory();
+    const history = useHistory();
 
     const sendToServer = () => {
         axios({
@@ -14,7 +14,7 @@ function Page5Review() {
             url: '/prime_feedback',
             data: reviewToAdd,
         }).then(response => {
-            // history.pushState('/');
+            history.pushState('/');
         })
     }
 
