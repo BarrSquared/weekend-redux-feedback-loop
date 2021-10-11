@@ -22,6 +22,7 @@ function Page5Review() {
 
     return(
         <section>
+            <p>{JSON.stringify(reviewToAdd)}</p>
             <h2>Review your feedback!</h2>
             <p>Feelings: {reviewToAdd.feeling}</p>
             <p>Understanding: {reviewToAdd.understanding}</p>

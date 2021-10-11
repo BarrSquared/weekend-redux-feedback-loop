@@ -18,7 +18,7 @@ function Page2Understanding() {
                 payload: understanding
             });
             clearUnderstanding();
-            history.push('/Page3Understanding');
+            history.push('/Page3Supported');
         } else {
             alert("You must enter a number between 1 and 5!");
             clearUnderstanding();

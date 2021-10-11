@@ -6,6 +6,7 @@ import React from 'react';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import './App.css';
+import { useHistory } from 'react-router-dom';
 
 import Page1Feeling from '../Page1Feeling/Page1Feeling';
 import Page2Understanding from '../Page2Understanding/Page2Understanding';
@@ -15,6 +16,10 @@ import Page5Review from '../Page5Review/Page5Review';
 import Page6TY from '../Page6TY/Page6TY';
 
 function App() {
+  const history = useHistory();
+  const startFeedbackLoop = () => {
+    history.push('/');
+  }
 
   return (
     <div className='App'>
@@ -24,8 +29,10 @@ function App() {
       </header>
       <main>
         {/* Add button to start feedback */}
-        <Router>
-          <Route exact path="/Page1Feeling" component={Page1Feeling} />
+        <button onClick={startFeedbackLoop}></button>
+        {/*changed page1 path from Page1Feeling to / */}
+        <Router> 
+          <Route exact path="/" component={Page1Feeling} />
           <Route exact path="/Page2Understanding" component={Page2Understanding} />
           <Route exact path="/Page3Supported" component={Page3Supported} />
           <Route exact path="/Page4Comments" component={Page4Comments} />
