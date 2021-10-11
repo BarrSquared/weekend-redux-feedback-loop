@@ -1,10 +1,13 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function Page6TY() {
+    const history = useHistory();
 
     const leaveNewFeedback = (event) => {
-        console.log('In page 6, clicking Leave New Feedback button');
+        history.push('/');
+        // console.log('In page 6, clicking Leave New Feedback button');
     }
 
     return(

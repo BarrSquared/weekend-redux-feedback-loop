@@ -14,7 +14,7 @@ function Page5Review() {
             url: '/prime_feedback',
             data: reviewToAdd,
         }).then(response => {
-            history.pushState('/Page6TY');
+            history.push('/Page6TY');
         })
     }
 
