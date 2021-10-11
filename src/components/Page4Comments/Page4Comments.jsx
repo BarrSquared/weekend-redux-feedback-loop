@@ -12,7 +12,7 @@ function Page4Comments() {
     const submitComment = (event) => {
         event.preventDefault();
         console.log('Updating comment rating.', comment);
-        if(comment.length >=0 && comment.length <= 500) {
+        if(comment.length >=0 && comment.length <= 250) {
             dispatch({
                 type: 'SET_COMMENT',
                 payload: comment

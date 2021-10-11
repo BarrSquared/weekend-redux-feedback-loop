@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 
 
-const defaultReview = {feeling: '', understanding: '', support: '', comments: ''};
+const defaultReview = {feeling: 0, understanding: 0, support: 0, comments: ''};
 
 const reviewToAdd = (state = defaultReview, action) => {
     if(action.type === 'SET_FEELING_RATING') {

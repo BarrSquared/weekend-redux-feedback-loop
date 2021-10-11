@@ -28,8 +28,6 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <main>
-        {/* Add button to start feedback */}
-        <button onClick={startFeedbackLoop}></button>
         {/*changed page1 path from Page1Feeling to / */}
         <Router> 
           <Route exact path="/" component={Page1Feeling} />

@@ -14,7 +14,7 @@ function Page5Review() {
             url: '/prime_feedback',
             data: reviewToAdd,
         }).then(response => {
-            history.pushState('/');
+            history.pushState('/Page6TY');
         })
     }
 
@@ -27,7 +27,7 @@ function Page5Review() {
             <p>Feelings: {reviewToAdd.feeling}</p>
             <p>Understanding: {reviewToAdd.understanding}</p>
             <p>Support: {reviewToAdd.support}</p>
-            <p>Comments: {reviewToAdd.comment}</p>
+            <p>Comments: {reviewToAdd.comments}</p>
             <button onClick={sendToServer}>SUBMIT</button>
         </section>
     );
