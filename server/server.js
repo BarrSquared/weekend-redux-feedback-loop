@@ -17,17 +17,18 @@ app.get('/test', (req, res) => {
 
 app.post('/prime_feedback', (req, res) => {
     let newReview = req.body;
-    console.log('In server.js adding new comment. newComment: ', newComment);
+    console.log('In server.js adding new review. newReview: ', newReview);
     let queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
     VALUES ($1, $2, $3, $4);`;
     pool.query(queryText, [newReview.feeling, newReview.understanding, newReview.support, newReview.comments])
     .then((result) => {
+        console.log('Success sending review! Result: ', result);
         res.sendStatus(201);
     }).catch((error) => {
         console.log('Error adding new review. New review data: ', newReview);
         res.sendStatus(500);
-    })
-})
+    });
+});
 
 // add app.use route for review feedback
 // app.use('/prime_feedback', reviewToAdd);
